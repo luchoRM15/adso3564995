@@ -1,2 +1,4 @@
-# adso3564995
-Lorem ipsum dolor sit amet.
+# ADSO 3564995
+![Profile Picture](src/images/ADSO IMAGE.png)
+## Luis Fernando Isaza Arias
+### Análisis y Desarrollo de Software

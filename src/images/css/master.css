@@ -3,7 +3,7 @@
 
 /* Styles */
 body {
-    background: linear-gradient(to top, #738678, #2c332e);
+    background: linear-gradient(180grad, #14ee4e, #2c332e);
     color: #eddcb9aa;
     background-attachment: fixed;
     font-family: Poppins;
@@ -20,6 +20,48 @@ body {
                 }
                 img {
                     border: 4px solid #baffa933;
+                }
+            }
+            section {
+                h2.subtitle {
+                    align-items: center;
+                    background-color: #3df705;
+                    border-radius: 8px;
+                    color: #0009;
+                    display: flex;
+                    font-weight: 500;
+                    justify-content: space-between;
+                    margin: 0;
+                    padding: 0.4rem;
+                    span {
+                        align-items: center;
+                        background-color: #0009;
+                        border-radius: 50%;
+                        color: #3df705;
+                        display: flex;
+                        height: 30px;
+                        justify-content: center;
+                        width: 30px;
+                    }
+                }
+                small {
+                    color: #fff9;
+                }
+                h3 {
+                    margin: 0;
+                    border-bottom: 1px dotted #baffa9aa;
+
+                }
+                p {
+                    color: #fff9;
+                    font-size: 1.2rem;
+                }
+
+                xmp {
+                    background-color: #0009;
+                    border-radius: 8px;
+                    color: #fff;
+                    padding: 0.4rem;
                 }
             }
         }
@@ -92,6 +134,13 @@ body {
                 font-weight: 400;
                 margin: 0;
             }
+        }
+
+        section {
+            background-color: #000;
+            border-radius: 8px;
+            padding: 0.6rem;
+            width: 380px;
         }
 
         menu.mmenu {

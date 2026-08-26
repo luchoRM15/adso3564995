@@ -191,9 +191,14 @@
             </h2>
             <small>Groups elements together.</small>
             <h3>Example:</h3>
-            <p>(header>nav)(section>article) ↔️</p>
+            <p>(header>nav)+(section>article) ↔️</p>
             <h3>Result:</h3>
-<xmp>(header>nav)(section>article)</xmp>
+<xmp><header>
+    <nav></nav>
+</header>
+<section>
+    <article></article>
+</section></xmp>
         </section>
         <section>
             <h2 class="subtitle">
@@ -202,11 +207,41 @@
             </h2>
             <small>Generates placeholder text.</small>
             <h3>Examples:</h3>
-            <p>lorem ↔️</p>
+            <p>lorem3 ↔️</p>
             <p>lorem20 ↔️</p>
             <p>lorem*5 ↔️</p>
             <h3>Result:</h3>
-<xmp>Lorem ipsum dolor</xmp>
+<xmp>Lorem, ipsum dolor.</xmp>
+        </section>
+        <section>
+            <h2 class="subtitle">
+                15-HTML Documents
+                <span> html: </span>
+            </h2>
+            <small>Creates various HTML document types.</small>
+            <h3>Examples :</h3>
+            <p>html:xs ↔️</p>
+            <p>html:xt ↔️</p>
+            <p>html:4s ↔️</p>
+            <p>html:4t ↔️</p>
+            <p>html:5 ↔️</p>
+            <h3>Result:</h3>
+<xmp><html:xs></html:xs>
+<html:xt></html:xt>
+<html:4s></html:4s>
+<html:4t></html:4t></xmp>
+        </section>
+        <section>
+            <h2 class="subtitle">
+                16-Meta Tags
+                <span> meta: </span>
+            </h2>
+            <small>Generates meta tags.</small>
+            <h3>Example :</h3>
+            <p>meta:vp ↔️</p>
+            <h3>Result:</h3>
+<xmp><meta name="viewport" 
+content="width=device-width, initial-scale=1.0"></xmp>
         </section>
     </main>
 </body>

@@ -3,14 +3,54 @@
 
 /* Styles */
 body {
-    background: linear-gradient(to top, #738678, #2c332e);
+    background: linear-gradient(180deg, #0ceb47, #000000);
     color: #eddcb9aa;
     background-attachment: fixed;
     font-family: Poppins;
     min-height: 100dvh;
 
+    &.html {
+        background: linear-gradient(160deg, #e44d26, #39130a);
+        background-attachment: fixed;
+        color: #ed8255;
+        main {
+            header.mmenu {
+                h1 {
+                    border-bottom: 2px solid #e44d26;
+                }
+                img {
+                    border: 4px solid #e44d26;
+                }
+            }
+            menu.mmenu {
+                a:is(:link, :visited) {
+                    &:hover {
+                        background-color: #e44d26;
+                        aside {
+                            h4 {
+                                color: white
+                            }
+                        }
+                    }
+                    span {
+                        background-color: #e44d26;
+                        height: 50px;
+                        font-size: 1.4rem;
+                        width: 50px;
+                        color: white;
+                    }
+                    aside {
+                        h3 {
+                            font-weight: 300;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     &.emmet {
-        background: linear-gradient(to top, #7acb16, #192a05);
+        background: linear-gradient(17deg, #7acb16, #192a05);
         color: #baffa9aa;
 
         main {
@@ -78,6 +118,11 @@ body {
         top: 6px;
         transition: all 0.4s ease-in;
         width: 40px;
+        a:is(:link, :visited) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
         &:hover {
             opacity: .9;
             transform: scale(1.1);
@@ -97,7 +142,13 @@ body {
 
         header.mmenu {
             text-align: center;
-
+            &.internal {
+                h1 { font-size: 2rem;}
+                img {
+                    height: 80px;
+                    width: 80px;
+                }
+            }
             h1 {
                 font-size: 3rem;
                 font-weight: 200;
@@ -139,7 +190,18 @@ body {
             border-radius: 8px;
             padding: 0.6rem;
             margin: 1rem auto;
+            min-height: 240px;
             width: 360px;
+            h3.subtitle {
+                font-weight: 500;
+                padding-bottom: 0.2rem;
+                border-bottom: 2px dotted #fff9;
+            }
+            p {
+                color: #fff9;
+                text-align: justify;
+                
+            }
         }
 
         menu.mmenu {

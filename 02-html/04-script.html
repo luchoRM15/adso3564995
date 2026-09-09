@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>01-document</title>
+    <title>04-script</title>
     <link rel="stylesheet" href="../src/images/css/master.css">
 </head>
 <body class="html">
@@ -16,16 +16,26 @@
     </nav>
     <main>
         <header class="mmenu internal">
-            <h1>01-document</h1>
+            <h1>04-script</h1>
             <img src="../src/images/logo-html.png" alt="html">
-            <h3>Defines basic structure of an HTML5 document.</h3>
+            <h3>Inserts JavaScript code.</h3>
         </header>
         <section>
-            <h3 class="subtitle">This is a Tittle level 3: </h3>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, tempora placeat nobis excepturi illo quod consectetur harum cumque omnis inventore officiis voluptate aliquid ipsa doloribus laborum magni ipsum nisi quo eaque necessitatibus, laudantium ratione quia itaque. Culpa suscipit similique cupiditate.
-            </p>
+            <h3 class="subtitle">Example: </h3>
+            <h4 class="user">Cristiano Ronaldo</h4>
         </section>
     </main>
+    <script>
+        const user = document.querySelector('.user');
+        const answ = prompt('What´s your name?');
+        user.style.color = "#fff9";
+        user.style.fontSize = "1.4rem";
+        
+        if (answ) {
+            user.textContent = "Welcome: 😎 "+answ;
+        } else {
+            user.textContent = "Welcome: 😏 Guest!";
+        }
+    </script>
 </body>
 </html>

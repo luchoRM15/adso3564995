@@ -16,11 +16,42 @@
             width: 260px;
         }
         div.child {
-            background-color: purple;
-            color: red;
+            background-color: #5a068a;
+            color: #fff9;
             padding: 0.4rem;
             text-align: center;
             width: 80px;
+        }
+        div.relative {
+            position: relative;
+            top: 100px;
+            left: 130px
+        }
+        div.absolute {
+            position: absolute;
+            bottom: 14px;
+            left: 14px;
+        }
+        div.fixed {
+            position: fixed;
+            top: 600px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 9;
+        }
+        div.sticky {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 20px;
+            width: 100%;
+        }
+        main section div.parent p {
+            color: #333333;
+            font-size: 0.8rem !important;
+            text-align: justify;
+        }
+        main section div.parent:last-of-type {
+            margin-bottom: 48rem;
         }
     </style>
 </head>
@@ -36,7 +67,7 @@
         <header class="mmenu internal   ">
             <h1>15-position</h1>
             <img src="../src/images/logo-css.png" alt="css">
-            <h3>Description.</h3>
+            <h3>Property controlling how an element is located in the document flow:</h3>
             <ul>
                 <li>Normal/Static.</li>
                 <li>Relative.</li>

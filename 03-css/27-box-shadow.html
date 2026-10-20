@@ -5,6 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>27-box shadow</title>
     <link rel="stylesheet" href="../src/images/css/master.css">
+    <style>
+        section {
+            div.box {
+                border: 4px solid #fff;
+                background-color: #caa0f5aa;
+                height: 200px;
+                margin: 2rem auto;
+                width: 300px;
+
+                &.box1 {
+                    box-shadow: 0 0 12px #fff
+                }
+                &.box2 {
+                    box-shadow: -10px -10px 24px 0 #fff
+                }
+                &.box3 {
+                    box-shadow: 0 0 20px #fff inset
+                }
+                &.box4 {
+                    box-shadow: 4px 4px 0 0    #ffcd00,
+                                8px 8px 0 0    #003087,
+                                12px 12px 0 0  #c8102e;
+                }
+            }
+            div.images {
+                text-align: center;
+                img {
+                    width: 160px;
+                    &:first-of-type {
+                        box-shadow: 0 0 12px #fff;
+                    }
+                    &:last-of-type {
+                        filter:drop-shadow(0 0 12px #fff);
+                    }
+                }
+            }
+        }
+    </style>
 </head>
 <body class="css">
     <nav class="goback">

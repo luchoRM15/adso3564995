@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>39-Challenge responsive</title>
+    <style>
+        * {
+            transition: all 0.4ms ease;
+        }
+
+        body {
+            background: url(imgs/dragon-ball-3840x2160-21222.jpg) no-repeat center;
+            background-size: 2330px;
+            color: white;
+            font-family: sans-serif;
+            padding: 0;
+            margin: 0;
+
+            main {
+                border: 10px white solid;
+                padding: 1rem;
+                margin: 2rem auto;
+                width: 1228px; /* 1280 - (20px + 32px)*/
+
+                header {
+                    figure.logo {
+                        background: url(imgs/logo\ dragon\ ball.png) no-repeat center;
+                        background-size: 500px;
+                        height: 600px;
+                        transform: translateY(-37%);
+                        padding: 0;
+                        margin: 0 auto;
+                        width: 600px;
+                    }
+
+                    menu {
+                        margin: 0;
+                        padding: 0;
+
+                        a:is(:link, :visited) {
+                            background: url(imgs/goku.webp) no-repeat center;
+                            background: white;
+                            color: #013571;
+                            font-size: 1.2rem;
+                            padding: 1.4rem 1rem;
+                            display: inline-block;
+                            text-align: center;
+                            text-decoration: none;
+                            width: 209.2px;
+
+                            &:hover {
+                            background: linear-gradient(#013571 90%, white 10%);
+                            transform: translateY(-10px);
+                            color: white;
+                            }
+                        }
+                    }
+                }
+                section {
+                    h2 {
+                        text-align: center;
+                        font-size: 2.8rem;
+
+                        &:nth-of-type(2),
+                        &:last-of-type {
+                            display: none;
+                        }
+                    }
+
+                    p {
+                        line-height: 1.8rem;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <figure class="logo"></figure>
+            <menu>
+                <div class="personajes">
+                    <div class="personaje1">
+                        <img src="img/goku.png" alt="Goku" class="imagen-personaje">
+                        <p class="nombre-personaje">Goku</p>
+                    </div>
+
+                     <div class="personaje2">
+                        <img src="img/vegeta.png" alt="Vegeta" class="imagen-personaje">
+                        <p class="nombre-personaje">Vegeta</p>
+                    </div>
+
+                    <div class="personaje3">
+                        <img src="img/gohan.png" alt="Gohan" class="imagen-personaje">
+                        <p class="nombre-personaje">Gohan</p>
+                    </div>
+
+                    <div class="personaje4">
+                        <img src="img/piccolo.png" alt="Piccolo" class="imagen-personaje">
+                        <p class="nombre-personaje">Piccolo</p>
+                    </div>
+                </div>
+            </menu>
+        </header>
+        <section>
+            <h2>Desktop: > 1280px</h2>
+            <h2>Tablet: < 1280px > 800px</h2>
+            <h2>Mobile: < 800px</h2>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore, similique labore exercitationem eligendi officia perferendis suscipit vel. Similique, nemo aspernatur?
+            </p>
+        </section>
+    </main>
+</body>
+</html>

@@ -3,35 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>39-Challenge responsive</title>
+    <title>38-Media Queries</title>
     <style>
-        * {
-            transition: all 0.4ms ease;
+       *{
+            transition: all 0.4s ease;
         }
 
         body {
-            background: url(imgs/dragon-ball-3840x2160-21222.jpg) no-repeat center;
-            background-size: 2330px;
-            color: white;
+            background: linear-gradient(#000, transparent 100%),
+                            url(imgs/dragon-ball-3840x2160-21222.jpg) no-repeat center / cover;
+            color: #fff;
             font-family: sans-serif;
             padding: 0;
-            margin: 0;
+            margin: 0 auto;
+            background-attachment: fixed;
+
 
             main {
-                border: 10px white solid;
                 padding: 1rem;
                 margin: 2rem auto;
-                width: 1228px; /* 1280 - (20px + 32px)*/
+                width: 1228px;
+                height: 100%;
 
                 header {
                     figure.logo {
                         background: url(imgs/logo\ dragon\ ball.png) no-repeat center;
-                        background-size: 500px;
-                        height: 600px;
-                        transform: translateY(-37%);
                         padding: 0;
+                        height: 1600px;
                         margin: 0 auto;
-                        width: 600px;
+                        width: 4000px;
+                        zoom: 0.2;
+                        
                     }
 
                     menu {
@@ -39,79 +41,215 @@
                         padding: 0;
 
                         a:is(:link, :visited) {
-                            background: url(imgs/goku.webp) no-repeat center;
-                            background: white;
-                            color: #013571;
-                            font-size: 1.2rem;
+                            color: greenyellow;
+                            font-size: 2.4rem;
                             padding: 1.4rem 1rem;
                             display: inline-block;
                             text-align: center;
                             text-decoration: none;
-                            width: 209.2px;
+                            width: 247px;
+                            height: 310px;
+                            margin: 0.5rem;
+                            border: 4px solid greenyellow;
+                            
+                            &:first-of-type {
+                                background: url(imgs/goku.jpg) no-repeat center / cover;
+                            }
+
+                            &:nth-of-type(2) {
+                                background: url(imgs/gohan.webp) no-repeat center / cover;
+                            }
+
+                            &:nth-of-type(3) {
+                                background: url(imgs/Vegeta.webp) no-repeat center / cover;
+
+                               
+                            }
+                        
+
+                            &:nth-of-type(4) {
+                                background: url(imgs/piccolo.webp) no-repeat center / cover;
+                            }
 
                             &:hover {
-                            background: linear-gradient(#013571 90%, white 10%);
-                            transform: translateY(-10px);
-                            color: white;
+                                font-size: 3rem;
                             }
                         }
                     }
-                }
+                } 
+                
                 section {
-                    h2 {
+                
+                    h3 {
                         text-align: center;
-                        font-size: 2.8rem;
-
-                        &:nth-of-type(2),
-                        &:last-of-type {
-                            display: none;
+                        font-size: 3.5rem;
+                        color: greenyellow;
                         }
                     }
 
                     p {
-                        line-height: 1.8rem;
+                        line-height: 3.66rem;
+                        text-align: justify;
+                        font-size: 1.6rem;
+                        background-color: #0009;
+                        padding-right: 0.5rem;
+                    }
+                    img {
+                        display: block;
+                        margin: 0 auto;
+                        width: 140px;
+                        float: left;
+                        padding: 0;
+                        
+                        
+                        &:hover {
+                            transform: scale(1.1);
+                            box-shadow: 0 0 20px greenyellow;
+                        }
+                    }
+                }
+            }
+        
+
+
+
+        @media (max-width: 1288px) {
+            body {
+                main {
+                    width: 800px;
+
+                    header {
+                        figure.logo {
+                            background: url(imgs/logo\ dragon\ ball.png) no-repeat center;
+                            width: 4000px;
+                            height: 1600px;
+                            
+                        }
+                        menu {
+                            a:is(:link, :visited) {
+                                width: 337px;
+                                height: 337px;
+                                
+                                
+                            }
+                        }
+                    }
+                    section {
+                
+                    h3 {
                         text-align: center;
+                        font-size: 3.5rem;
+                        color: greenyellow;
+                        }
+                    }
+
+                    p {
+                        line-height: 2.74rem;
+                        text-align: justify;
+                        font-size: 1.4rem;
+                        background-color: #0009;
+                        padding-right: 0.5rem;
+                    }
+                    img {
+                        display: block;
+                        margin: 0 auto;
+                        width: 140px;
+                        float: left;
+                        padding: 0;
+                        
+                        
+                        &:hover {
+                            transform: scale(1.1);
+                            box-shadow: 0 0 20px greenyellow;
+                        }
                     }
                 }
             }
         }
-    </style>
+
+        @media (max-width: 860px) {
+            body {
+                main {
+                    width: 360px;
+
+                    header {
+                        figure.logo {
+                            background: url(imgs/logo\ dragon\ ball.png) no-repeat center;
+                            width: 4000px;
+                            height: 1600px;
+                            zoom: 0.1;
+                        }
+                        menu {
+                            a:is(:link, :visited) {
+                                display: inline-block;
+                                margin-bottom: 0.8rem;
+                                width: 300px;
+                                height: 300px;
+                            }
+                        }
+                    }
+                    section {
+                        article {
+                            img {
+                                width: 345px;
+                                
+                                
+                            }
+                        }
+                    }
+                    
+                        
+                        
+                }
+            }
+        }
+
+</style>
 </head>
 <body>
     <main>
         <header>
             <figure class="logo"></figure>
             <menu>
-                <div class="personajes">
-                    <div class="personaje1">
-                        <img src="img/goku.png" alt="Goku" class="imagen-personaje">
-                        <p class="nombre-personaje">Goku</p>
-                    </div>
-
-                     <div class="personaje2">
-                        <img src="img/vegeta.png" alt="Vegeta" class="imagen-personaje">
-                        <p class="nombre-personaje">Vegeta</p>
-                    </div>
-
-                    <div class="personaje3">
-                        <img src="img/gohan.png" alt="Gohan" class="imagen-personaje">
-                        <p class="nombre-personaje">Gohan</p>
-                    </div>
-
-                    <div class="personaje4">
-                        <img src="img/piccolo.png" alt="Piccolo" class="imagen-personaje">
-                        <p class="nombre-personaje">Piccolo</p>
-                    </div>
-                </div>
+                <a href="#1">Goku</a>
+                <a href="#2">Gohan</a>
+                <a href="#3">Vegeta</a>
+                <a href="#4">Piccolo</a>
             </menu>
         </header>
         <section>
-            <h2>Desktop: > 1280px</h2>
-            <h2>Tablet: < 1280px > 800px</h2>
-            <h2>Mobile: < 800px</h2>
-            <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore, similique labore exercitationem eligendi officia perferendis suscipit vel. Similique, nemo aspernatur?
-            </p>
+            <article>
+                <h3>Goku</h3>
+                <img class="goku" src="imgs/goku.jpg" alt="goku">
+                <p>
+                    Protagonista saiyajin de gran corazón y apetito insaciable. Su pasión es entrenar intensamente para superar sus propios límites, proteger la Tierra y enfrentar a los rivales más poderosos del universo con una alegría inquebrantable.
+            </article>
+        </section>
+        <section>
+            <article>
+                <h3>Gohan</h3>
+                <img class="gohan" src="imgs/gohan.webp" alt="gohan">
+                <p>
+                   Hijo mayor de Goku y Milk. Es un híbrido con un potencial oculto descomunal que explota en momentos de crisis. Aunque es un guerrero formidable, prefiere una vida tranquila enfocada en sus estudios y su familia.
+            </article>
+        </section>
+        <section>
+            <article>
+                <h3>Vegeta</h3>
+                <img class="vegeta" src="imgs/vegeta.webp" alt="vegeta">
+                <p>
+                    Orgulloso príncipe de los saiyajins. Comenzó como un despiadado villano, pero evolucionó hasta convertirse en el eterno rival y fiel aliado de Goku, impulsado siempre por su orgullo y su deseo constante de superación personal.
+                </p>
+            </article>
+        </section>
+        <section>
+            <article>
+                <h3>Piccolo</h3>
+                <img class="piccolo" src="imgs/piccolo.webp" alt="piccolo">
+                <p>
+                    Guerrero namekuseijin y antiguo enemigo de Goku que se transformó en un estratega sabio, fiel aliado y figura mentora fundamental para Gohan, combinando una gran disciplina táctica con un profundo sentido de protección.
+                </p>
+            </article>
         </section>
     </main>
 </body>

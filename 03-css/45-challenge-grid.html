@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>45-Challenge Grid</title>
+    <link rel="stylesheet" href="../src/images/css/master.css">
+    <style>
+        section {
+          display: block;
+          }
+
+           .gallery {
+               display: grid;
+               gap: 10px;
+               width: 100%;
+               box-sizing: border-box;
+               margin: 0;
+               padding: 0;
+               grid-template-columns: repeat(3, 1fr);
+               grid-template-rows: repeat(3, 140px);
+               grid-template-areas:
+               "one  two  three"
+               "four two  five"
+               "six  six  seven";
+              }
+
+              .gallery img {
+                  object-fit: cover;
+                  width: 100%;
+                  height: 100%;
+                  display: block;
+                  border: 3px solid #fff;
+                  border-radius: 10px;
+                }
+
+              .one   { grid-area: one; 
+                       object-position: 94% center; 
+                    }
+
+              .two   { grid-area: two; 
+                       width: 50%;
+                       height: 50%;
+                       align-self: center;
+                    }
+
+              .three { grid-area: three;
+                       object-position: 90% center;
+                    }
+              .four  { grid-area: four; }
+              .five  { grid-area: five; }
+              .six   { grid-area: six; }
+              .seven { grid-area: seven; }
+    </style>
+</head>
+<body class="css">
+    <nav class="goback">
+        <a href="index.html">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#fff" viewBox="0 0 256 256">
+                <path d="M208,72H128V32a8,8,0,0,0-13.66-5.66l-96,96a8,8,0,0,0,0,11.32l96,96A8,8,0,0,0,128,224V184h80a16,16,0,0,0,16-16V88A16,16,0,0,0,208,72Zm0,96H120a8,8,0,0,0-8,8v28.69L35.31,128,112,51.31V80a8,8,0,0,0,8,8h88Z"></path>
+            </svg>
+        </a>
+    </nav>
+    <main>
+        <header class="mmenu internal">
+            <h1>45-Challenge Grid</h1>
+            <img src="../src/images/logo-css.png" alt="Css">
+            <h3>Grid Areas: Irregular Gallery.</h3>
+        </header>
+        <section>
+           <h3 class="subtitle">Gallery:</h3>
+
+          <div class="gallery">
+              <img src="imgs/southpark2.jpg" alt="South Park" class="one">
+              <img src="imgs/southpark1.webp" alt="South Park" class="two">
+              <img src="imgs/southpark3.jpg" alt="South Park" class="three">
+              <img src="imgs/southpark4.jpg" alt="South Park" class="four">
+              <img src="imgs/southpark5.jpg" alt="South Park" class="five">
+              <img src="imgs/southpark6.jpeg" alt="South Park" class="six">
+              <img src="imgs/southpark7.jpg" alt="South Park" class="seven">
+           </div>
+           </section>
+    </main>
+</body>
+</html>

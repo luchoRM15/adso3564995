@@ -9,6 +9,58 @@ body {
     font-family: Poppins;
     min-height: 100dvh;
 
+    &.js {
+        background: linear-gradient(160deg, #f0db4f, #0e0715);
+        background-attachment: fixed;
+        color: #f0db4f;
+        main {
+            header.mmenu {
+                h1 {
+                    border-bottom: 2px solid #f0db4f;
+                }
+                img {
+                    border: 4px solid #f0db4f;
+                }
+                h3 {
+                    font-weight: 300;
+                }
+                ul, ol{
+                    color: #fff9;
+                    text-align: left;
+                }
+            }
+            menu.mmenu {
+                a:is(:link, :visited) {
+                    &:hover {
+                        background-color: #f0db4f;
+                        aside {
+                            h4 {
+                                color: black
+                            }
+                        }
+                    }
+                    span {
+                        background-color: #f0db4f;
+                        height: 50px;
+                        font-size: 1.4rem;
+                        width: 50px;
+                        color: black;
+                    }
+                    aside {
+                        h3 {
+                            font-weight: 300;
+                        }
+                    }
+                }
+            }
+            section {
+                p, ul, ol {
+                    color:#fff9
+                }
+            }
+        }
+    }
+
     &.css {
         background: linear-gradient(160deg, #663399, #0e0715);
         background-attachment: fixed;

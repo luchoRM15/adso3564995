@@ -6,51 +6,103 @@
     <title>45-Challenge Grid</title>
     <link rel="stylesheet" href="../src/images/css/master.css">
     <style>
-        section {
-          display: block;
-          }
+           div.gallery {
+            display: grid;
+            grid-template-areas: "one two three"
+                                 "four two five"
+                                 "six six seven";
+            grid-gap: 0.2rem;
+            margin: 2rem auto;
+            width: 200px;
+            justify-content: center;
 
-           .gallery {
-               display: grid;
-               gap: 10px;
-               width: 100%;
-               box-sizing: border-box;
-               margin: 0;
-               padding: 0;
-               grid-template-columns: repeat(3, 1fr);
-               grid-template-rows: repeat(3, 140px);
-               grid-template-areas:
-               "one  two  three"
-               "four two  five"
-               "six  six  seven";
-              }
+              img {
+                    background-color: #f00;
+                    height: 100%;
+                    width: 100%;
+                    
+    
+                    &:first-child {
+                    background-color: #00f;
+                    grid-area: one;
+                    width: calc(90px + 0.9rem);
+                    height: 100px;
+                    }
+                    &:nth-child(2) {
+                      grid-area: two;
+                      width: calc(100px + 0.2rem);
+                    }
+                    &:nth-child(3) {
+                      grid-area: three;
+                      width: calc(100px + 0.2rem);
+                    }
+                    &:nth-child(4) {
+                      background-color: #00f;
+                      grid-area: four;
+                      height: calc(100px + 0.2rem);
+                    }
+                    &:nth-child(5) {
+                      grid-area: five;
+                      width: calc(100px + 0.2rem);
+                    }
 
-              .gallery img {
-                  object-fit: cover;
-                  width: 100%;
-                  height: 100%;
-                  display: block;
-                  border: 3px solid #fff;
-                  border-radius: 10px;
+                    &:nth-child(6) {
+                      grid-area: six;
+                      width: calc(207px + 0.2rem);
+                    }
+                    &:last-child {
+                      grid-area: seven;
+                      width: calc(100px + 0.2rem);
+                    }
                 }
+           }
 
-              .one   { grid-area: one; 
-                       object-position: 94% center; 
-                    }
+           div.gallery2 {
+            display: grid;
+            grid-template-areas: " one one   "
+                                 " two three "
+                                 " four five "
+                                 " four six  ";
+            grid-gap: 0.2rem;
+            margin: 2rem auto;
+            width: 200px;
+            justify-content: center;
 
-              .two   { grid-area: two; 
-                       width: 50%;
-                       height: 50%;
-                       align-self: center;
-                    }
-
-              .three { grid-area: three;
-                       object-position: 90% center;
-                    }
-              .four  { grid-area: four; }
-              .five  { grid-area: five; }
-              .six   { grid-area: six; }
-              .seven { grid-area: seven; }
+            img {
+            background-color: crimson;
+    
+            &:first-child {
+                background-color: teal;
+                grid-area: one;
+                height: calc(115px + 0.2rem);
+            }
+            &:nth-child(2) {
+                grid-area: two;
+                width: calc(100px + 0.2rem);
+            }
+            &:nth-child(3) {
+                grid-area: three;
+                width: calc(100px + 0.2rem);
+                height: 103px;
+            }
+            &:nth-child(4) {
+                background-color: teal;
+                grid-area: four;
+                width: calc(100px + 0.2rem);
+                height: 152px;
+            }
+            &:nth-child(5) {
+                grid-area: five;
+                width: calc(100px + 0.2rem);
+                height: 80px;
+            }
+            &:last-child {
+                grid-area: six;
+                width: calc(100px + 0.2rem);
+                height: 68.8px;
+            }
+        }
+    }
     </style>
 </head>
 <body class="css">
@@ -68,16 +120,27 @@
             <h3>Grid Areas: Irregular Gallery.</h3>
         </header>
         <section>
-           <h3 class="subtitle">Gallery:</h3>
+           <h3 class="subtitle">Gallery: 1</h3>
 
           <div class="gallery">
               <img src="imgs/southpark2.jpg" alt="South Park" class="one">
-              <img src="imgs/southpark1.webp" alt="South Park" class="two">
-              <img src="imgs/southpark3.jpg" alt="South Park" class="three">
-              <img src="imgs/southpark4.jpg" alt="South Park" class="four">
+              <img src="imgs/southpark1.jpg" alt="South Park" class="two">
+              <img src="imgs/southpark3.webp" alt="South Park" class="three">
+              <img src="imgs/southpark4.webp" alt="South Park" class="four">
               <img src="imgs/southpark5.jpg" alt="South Park" class="five">
               <img src="imgs/southpark6.jpeg" alt="South Park" class="six">
               <img src="imgs/southpark7.jpg" alt="South Park" class="seven">
+           </div>
+
+           <h3 class="subtitle">Gallery: 2</h3>
+
+           <div class="gallery2">
+            <img src="imgs/rickandmorty1.jpg" alt="Rick and Morty" class="one">
+            <img src="imgs/rickandmorty2.jpg" alt="Rick and Morty" class="two">
+            <img src="imgs/rickandmorty3.jpg" alt="Rick and Morty" class="three">
+            <img src="imgs/rickandmorty4.jpg" alt="Rick and Morty" class="four">
+            <img src="imgs/rickandmorty5.jpg" alt="Rick and Morty" class="five">
+            <img src="imgs/rickandmorty6.jpg" alt="Rick and Morty" class="six">
            </div>
            </section>
     </main>

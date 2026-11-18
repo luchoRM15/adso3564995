@@ -59,47 +59,46 @@
 
            div.gallery2 {
             display: grid;
-            grid-template-areas: " one one   "
-                                 " two three "
-                                 " four five "
-                                 " four six  ";
+            grid-template-columns: 80px 80px 80px 80px;
+            grid-template-rows: 90px 90px 90px;
+            grid-template-areas: "one one two three"
+                                 "one one four four"
+                                 "five six four four";
             grid-gap: 0.2rem;
             margin: 2rem auto;
-            width: 200px;
+
             justify-content: center;
 
             img {
             background-color: crimson;
+            width: 100%;
+            height: 100%;
     
             &:first-child {
                 background-color: teal;
                 grid-area: one;
-                height: calc(115px + 0.2rem);
+
             }
             &:nth-child(2) {
                 grid-area: two;
-                width: calc(100px + 0.2rem);
+
             }
             &:nth-child(3) {
                 grid-area: three;
-                width: calc(100px + 0.2rem);
-                height: 103px;
+
             }
             &:nth-child(4) {
                 background-color: teal;
                 grid-area: four;
-                width: calc(100px + 0.2rem);
-                height: 152px;
+
             }
             &:nth-child(5) {
                 grid-area: five;
-                width: calc(100px + 0.2rem);
-                height: 80px;
+
             }
             &:last-child {
                 grid-area: six;
-                width: calc(100px + 0.2rem);
-                height: 68.8px;
+
             }
         }
     }

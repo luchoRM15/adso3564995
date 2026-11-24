@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01-write</title>
+    <link rel="stylesheet" href="../src/images/css/master.css">
+</head>
+<body class="js">
+    <nav class="goback">
+        <a href="index.html">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="white" viewBox="0 0 256 256">
+                <path d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z"></path>
+            </svg>
+        </a>
+    </nav>
+    <main>
+        <header class="mmenu internal   ">
+            <h1>01-write</h1>
+            <img src="../src/images/logo-js.png" alt="js">
+            <h3>Learn to write and execute basic JavaScript code.</h3>
+        </header>
+        <section>
+            <script>
+                document.write("<h3 class='subtitle'> Welcome to JS 💛 </h3>");
+            </script>
+            <p id="message"></p>
+        </section>
+    </main>
+    <script>
+        const msg = document.getElementById('message');
+        const string = 'Amazing'
+        msg.innerHTML = "<strong>We love</strong>";
+        msg.innerText += " Javascript";
+        msg.textContent += ` is ${string}`; // String Template
+
+        // Write Console
+        const pokemons = [
+            ['01', 'Pikachu', 'Electric'],
+            ['02', 'Bulbasaur', 'Grass'],
+            ['03', 'Charmander', 'Fire'],
+            ['04', 'Squirtle', 'Water']
+        ];
+        console.clear();
+        console.log("There are: "+pokemons.length+" pokemons");
+        console.table(pokemons);
+        console.log("4 pow 4 equals = "+4**4);
+
+    </script>
+</body>
+</html>
